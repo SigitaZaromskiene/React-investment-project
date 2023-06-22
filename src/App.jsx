@@ -3,8 +3,12 @@ import Form from "./components/Form";
 import List from "./components/List";
 import logo from "./img/investment.png";
 import { GlobalProvider } from "./components/Global";
+import { useState } from "react";
+import Message from "./components/Message";
 
 function App() {
+  const [message, setMessage] = useState("");
+
   return (
     <GlobalProvider>
       <div className={styles.container}>
@@ -15,6 +19,7 @@ function App() {
           <List />
         </div>
       </div>
+      {message === "" ? null : <Message></Message>}
     </GlobalProvider>
   );
 }

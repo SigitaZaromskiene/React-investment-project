@@ -1,5 +1,5 @@
 .form {
-  width: 480px;
+  width: 520px;
   background: linear-gradient(45deg, green, gray);
   border-radius: 5px;
   display: flex;
@@ -29,12 +29,21 @@ label {
   font-size: 16px;
   color: white;
   text-align: center;
+  width: 150px;
 }
 
 input {
   height: 30px;
   border: 1px solid white;
   background-color: transparent;
+  width: 100px;
+}
+
+input::placeholder {
+  color: white;
+  text-align: start;
+  font-size: 16px;
+  padding: 5px;
 }
 
 .button-container {

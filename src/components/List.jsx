@@ -8,8 +8,8 @@ function List() {
 
   return (
     <>
-      {!data ? (
-        <p>No investment calculated yet.</p>
+      {data.length === 0 ? (
+        <p style={{ fontSize: "18px" }}>No investment calculated yet.</p>
       ) : (
         data.map((li, i) => (
           <div key={uuidv4()} className={styles["list-container"]}>
@@ -18,17 +18,15 @@ function List() {
               <p>Total Savings</p>
               <p>Intrest(Year)</p>
               <p>Total intrest</p>
-              <p>Invested capital</p>
+              <p>Invested</p>
             </div>
-            <ul>
-              <li>
-                <p>{i + 1}</p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-              </li>
-            </ul>
+            <div className={styles.lists} style={{ color: "white" }}>
+              <p>{i + 1}</p>
+              <p>{li.curSave} &euro;</p>
+              <p>{li.intrest} &euro;</p>
+              <p>{li.yearSave} &euro;</p>
+              <p>{li.invest} &euro;</p>
+            </div>
           </div>
         ))
       )}

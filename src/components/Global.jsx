@@ -9,8 +9,6 @@ export const GlobalProvider = ({ children }) => {
   const [investment, setInvestment] = useState("");
   const [data, setData] = useState([]);
 
-  console.log(data);
-
   return (
     <Global.Provider
       value={{
