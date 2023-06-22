@@ -7,6 +7,9 @@ export const GlobalProvider = ({ children }) => {
   const [intrest, setIntrest] = useState("");
   const [yearSavings, setYearSavings] = useState("");
   const [investment, setInvestment] = useState("");
+  const [data, setData] = useState("");
+
+  console.log(data);
 
   return (
     <Global.Provider
@@ -19,6 +22,7 @@ export const GlobalProvider = ({ children }) => {
         setYearSavings,
         investment,
         setInvestment,
+        setData,
       }}
     >
       {children}
