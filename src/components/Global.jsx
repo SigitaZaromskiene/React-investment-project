@@ -7,7 +7,7 @@ export const GlobalProvider = ({ children }) => {
   const [intrest, setIntrest] = useState("");
   const [yearSavings, setYearSavings] = useState("");
   const [investment, setInvestment] = useState("");
-  const [data, setData] = useState("");
+  const [data, setData] = useState([]);
 
   console.log(data);
 
@@ -23,6 +23,7 @@ export const GlobalProvider = ({ children }) => {
         investment,
         setInvestment,
         setData,
+        data,
       }}
     >
       {children}

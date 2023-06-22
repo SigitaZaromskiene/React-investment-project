@@ -16,12 +16,22 @@ function Form() {
   } = useContext(Global);
 
   const saveDataHandler = () => {
-    setData({
-      curSave: currentSavings,
-      intrest: intrest,
-      yearSave: yearSavings,
-      invest: investment,
-    });
+    setData((d) => [
+      ...d,
+      {
+        curSave: currentSavings,
+        intrest: intrest,
+        yearSave: yearSavings,
+        invest: investment,
+      },
+    ]);
+    setCurrentSavings("");
+    setIntrest("");
+    setYearSavings("");
+    setInvestment("");
+  };
+
+  const resetHandler = () => {
     setCurrentSavings("");
     setIntrest("");
     setYearSavings("");
@@ -67,7 +77,9 @@ function Form() {
         <button className={styles.button} onClick={saveDataHandler}>
           Calculate
         </button>
-        <button className={styles.button}>Reset</button>
+        <button onClick={resetHandler} className={styles.button}>
+          Reset
+        </button>
       </div>
     </div>
   );

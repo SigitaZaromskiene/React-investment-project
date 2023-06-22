@@ -1,0 +1,16 @@
+.list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 480px;
+  margin-top: 50px;
+}
+
+.list-headline {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  color: rgb(25, 174, 25);
+  width: 480px;
+}
