@@ -2,7 +2,7 @@ import styles from "../css/Form.module.css";
 import { useContext, useState } from "react";
 import { Global } from "./Global";
 
-function Form() {
+function Form({ setMessage }) {
   const {
     setCurrentSavings,
     setIntrest,
@@ -13,12 +13,24 @@ function Form() {
     intrest,
     yearSavings,
     investment,
-    setMessage,
   } = useContext(Global);
 
   const saveDataHandler = () => {
-    if (!currentSavings || !intrest || !yearSavings || !investment) {
+    if (
+      currentSavings === "" ||
+      intrest === "" ||
+      yearSavings === "" ||
+      investment === ""
+    ) {
       setMessage("Please fill all information");
+      setInterval(() => {
+        setMessage("");
+      }, 2000);
+      setCurrentSavings("");
+      setIntrest("");
+      setYearSavings("");
+      setInvestment("");
+      return;
     }
     setData((d) => [
       ...d,
