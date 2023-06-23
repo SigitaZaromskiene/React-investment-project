@@ -2,13 +2,12 @@ import styles from "../css/Form.module.css";
 import { useContext, useState } from "react";
 import { Global } from "./Global";
 
-function Form({ setMessage }) {
+function Form({ setMessage, setData }) {
   const {
     setCurrentSavings,
     setIntrest,
     setYearSavings,
     setInvestment,
-    setData,
     currentSavings,
     intrest,
     yearSavings,
@@ -32,15 +31,12 @@ function Form({ setMessage }) {
       setInvestment("");
       return;
     }
-    setData((d) => [
-      ...d,
-      {
-        curSave: currentSavings,
-        intrest: intrest,
-        yearSave: yearSavings,
-        invest: investment,
-      },
-    ]);
+    setData({
+      curSave: currentSavings,
+      intrest: intrest,
+      yearSave: yearSavings,
+      invest: investment,
+    });
     setCurrentSavings("");
     setIntrest("");
     setYearSavings("");
