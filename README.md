@@ -1,3 +1,17 @@
+## 🌟 About
+
+This project is for educational porpuses only. 
+
+
+## 🎯 Project features/goals
+
+-   Learning CRUD and using localStorage
+-   Using new hook useContext
+-   Using controlled forms
+-   Form validation
+-   CSS module
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
