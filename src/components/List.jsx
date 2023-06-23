@@ -8,7 +8,7 @@ function List({ list }) {
 
   return (
     <>
-      {list === [] ? (
+      {list.length === 0 ? (
         <p style={{ fontSize: "18px" }}>No investment calculated yet.</p>
       ) : (
         <div className={styles["list-container"]}>
