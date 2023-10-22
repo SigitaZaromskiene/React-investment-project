@@ -5,11 +5,15 @@ This project is for educational porpuses only.
 
 ## 🎯 Project features/goals
 
--   Learning CRUD and using localStorage
--   Using new hook useContext
--   Using controlled forms
--   Form validation
--   CSS module
+🔗 Project Highlights:
+
+📈 Thoughtful Form Design: The project features a well-crafted investment form, designed with user experience in mind.
+
+💼 Efficient State Management: Leveraging useContext, we ensure efficient state management for real-time updates and a seamless user experience.
+
+🎨 CSS Modules: With CSS modules, we adopt a structured approach to styling, promoting clean and maintainable design practices.
+
+📦 localStorage Integration: User data is securely stored in localStorage, ensuring a convenient return to the form with data preservation.
 
 
 # Getting Started with Create React App
